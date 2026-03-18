@@ -1,3 +1,11 @@
+# Preventive Security Architecture using SCPs
+
+## Overview
+
+This architecture implements a preventive security model using AWS Organizations and Service Control Policies (SCPs) to enforce guardrails across multiple AWS accounts. It ensures that non-compliant security configurations, such as overly permissive security group rules, are blocked before they can be applied.
+
+---
+
 ## Architecture Diagram
 
 ```mermaid
@@ -26,4 +34,3 @@ flowchart TB
 
     CI -->|Approved changes| Account1
     CI -->|Approved changes| Account2
-
