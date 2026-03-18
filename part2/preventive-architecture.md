@@ -2,15 +2,14 @@
 
 ## Architecture Diagram
 
-```mermaid
 flowchart TB
 
-    Dev[Developer / Engineer]
+    Dev[Developer]
 
     Org[AWS Organizations]
-    SCP[Service Control Policy (SCP)]
+    SCP[Service Control Policy]
 
-    CI[Approved CI/CD Pipeline]
+    CI[Approved CICD Pipeline]
 
     Account1[Prod Account]
     Account2[Dev Account]
@@ -19,12 +18,12 @@ flowchart TB
     Dev --> Org
     Org --> SCP
 
-    SCP --> AccountA
-    SCP --> AccountB
-    SCP --> AccountC
+    SCP --> Account1
+    SCP --> Account2
+    SCP --> Account3
 
-    Dev -->|Denied if non-compliant| AccountA
-    Dev -->|Denied if non-compliant| AccountB
+    Dev -->|Denied if non compliant| Account1
+    Dev -->|Denied if non compliant| Account2
 
-    CI -->|Approved changes| AccountA
-    CI -->|Approved changes| AccountB
+    CI -->|Approved changes| Account1
+    CI -->|Approved changes| Account2
