@@ -1,7 +1,3 @@
-# Preventive Security Architecture using SCPs
-
-## Architecture Diagram
-
 flowchart TB
 
     Dev[Developer]
