@@ -16,10 +16,10 @@ flowchart TB
     Dev[Developer modifies Security Group]
 
     EventBridge[Amazon EventBridge Rule]
-    Lambda[AWS Lambda (Drift Detection & Remediation)]
+    Lambda[AWS Lambda - Drift Detection & Remediation]
     SG[Security Group]
     Logs[CloudWatch Logs]
-    SNS[Amazon SNS (Security Alerts)]
+    SNS[Amazon SNS - Security Alerts]
 
     Dev --> SG
     SG --> EventBridge
