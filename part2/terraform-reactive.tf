@@ -108,3 +108,7 @@ resource "aws_lambda_permission" "allow_eventbridge" {
   principal     = "events.amazonaws.com"
   source_arn    = aws_cloudwatch_event_rule.sg_change_rule.arn
 }
+
+# Note: The Lambda function code is abstracted in this implementation. 
+In a production environment, the function would include logic to validate 
+security group rules and remove non-compliant entries (e.g., 0.0.0.0/0).
